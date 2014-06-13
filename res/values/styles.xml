@@ -1,0 +1,62 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Light.NoTitleBar">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+
+    <style name="TextThem">
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/text_color</item>
+        <item name="android:padding">@dimen/main_padding</item>
+    </style>
+    <style name="WeaterMoreInfo">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/text_color</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:drawablePadding">5dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+    <!-- 退出添加动画. -->
+    <style name="AnimationActivitycity" parent="@android:style/Animation.Activity">     	
+        <item name="android:activityCloseEnterAnimation">@anim/entercity</item>
+     	<item name="android:activityCloseExitAnimation">@anim/exitcity</item>        
+    </style>
+    <!-- 进入添加动画. -->
+    <style name="AnimationActivity" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/enter</item>
+        <item name="android:activityOpenExitAnimation">@anim/exit</item>  
+                  
+    </style>
+    <style name="CityEnter" parent="AppTheme">
+        <item name="android:windowAnimationStyle">@style/AnimationActivity</item>        
+    </style>
+    <style name="CityExit" parent="AppTheme">
+        <item name="android:windowAnimationStyle">@style/AnimationActivitycity</item>        
+    </style>
+    
+    <!-- 自定义loading dialog -->
+    <style name="loading_dialog_tran" parent="android:style/Theme.Dialog">
+		<item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item> 
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        
+	</style>
+</resources>

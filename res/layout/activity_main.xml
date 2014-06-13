@@ -1,0 +1,140 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="${packageName}.${activityClass}" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/top_box"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:padding="10dp" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" >
+
+            <TextView
+                android:id="@+id/today_week"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="星期一"
+                android:textColor="@color/text_color"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/today_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/today_week"
+                android:paddingLeft="5dp"
+                android:text="05/26"
+                android:textColor="@color/text_color" />
+
+            <TextView
+                android:id="@+id/area"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="北京"
+                android:textColor="@color/text_color"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="5" >
+
+            <ImageView
+                android:id="@+id/today_weater_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true" />
+
+            <TextView
+                android:id="@+id/humidity"
+                style="@style/WeaterMoreInfo"
+                android:layout_centerVertical="true"
+                android:drawableLeft="@drawable/humidity" />
+
+            <TextView
+                android:id="@+id/wind"
+                style="@style/WeaterMoreInfo"
+                android:layout_below="@+id/humidity"
+                android:layout_marginTop="5dp"
+                android:drawableLeft="@drawable/wind" />
+
+            <TextView
+                android:id="@+id/air"
+                style="@style/WeaterMoreInfo"
+                android:layout_below="@+id/wind"
+                android:layout_marginTop="5dp"
+                android:drawableLeft="@drawable/air" />
+
+            <TextView
+                android:id="@+id/currentweater"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:textColor="@color/text_color"
+                android:textSize="56sp" />
+
+            <TextView
+                android:id="@+id/weaterinfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/currentweater"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/text_color"
+                android:textSize="20sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <com.gitonway.fineday.widget.jazzyviewpager.JazzyViewPager
+        android:id="@+id/jazzy_pager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/list_bg"
+        />
+	<RelativeLayout 
+	    android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:background="@color/list_bg"
+	    >
+        
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/refresh_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+         >
+
+        <ListView
+            android:id="@+id/weater_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/list_bg"
+            android:scrollbars="none" >
+        </ListView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+    <LinearLayout
+        android:id="@+id/toast_conten"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:orientation="horizontal" >
+    </LinearLayout>
+	</RelativeLayout>
+</LinearLayout>

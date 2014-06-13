@@ -1,0 +1,92 @@
+package com.gitonway.fineday.widget.magicviews.utils;
+
+import android.content.Context;
+import android.content.res.TypedArray;
+import android.util.AttributeSet;
+import android.widget.TextView;
+
+import com.gitonway.fineday.R;
+import com.gitonway.fineday.widget.magicviews.MagicFont;
+import com.gitonway.fineday.widget.magicviews.enums.PreferenceType;
+
+/**
+ * Created by ivankocijan on 18.05.2014..
+ */
+public class FontUtils {
+
+    /**
+     * Set's typface on view
+     *
+     * @param ctx
+     * @param attrs
+     * @param view
+     */
+    public static void setTypeface (Context ctx, AttributeSet attrs, TextView view) {
+
+        TypedArray a = ctx.obtainStyledAttributes(attrs, R.styleable.MagicFont);
+        String fontStyle = a.getString(R.styleable.MagicFont_typeFace);
+
+        if (fontStyle != null) {
+            view.setTypeface(MagicFont.getTypeface(ctx, fontStyle));
+        }
+
+        a.recycle();
+
+    }
+
+    /**
+     * Set's font style for custom preference
+     *
+     * @param ctx
+     * @param fontStyle
+     * @param views
+     */
+    public static void setPreferenceTypeface (Context ctx, String fontStyle, TextView... views) {
+
+        if (fontStyle != null) {
+
+            for (TextView view : views) {
+
+                view.setTypeface(MagicFont.getTypeface(ctx, fontStyle));
+
+            }
+
+        }
+
+    }
+
+    /**
+     * Returns font style from attribute set
+     *
+     * @param ctx
+     * @param attrs
+     * @return
+     */
+    public static String getPrefFontStyle (Context ctx, AttributeSet attrs, PreferenceType type) {
+
+        switch (type) {
+            case SIMPLE_PREFERENCE:
+                TypedArray simple = ctx.obtainStyledAttributes(attrs, R.styleable.MagicPreference);
+                return simple.getString(R.styleable.MagicPreference_prefTypeface);
+
+            case SWITCH_PREFERENCE:
+
+                TypedArray switchPref = ctx.obtainStyledAttributes(attrs, R.styleable.MagicSwitchPreference);
+                return switchPref.getString(R.styleable.MagicSwitchPreference_switchPrefTypeface);
+
+            case CHECKBOX_PREFERENCE:
+                TypedArray checkBox = ctx.obtainStyledAttributes(attrs, R.styleable.MagicCheckBoxPreference);
+                return checkBox.getString(R.styleable.MagicCheckBoxPreference_checkBoxTypeface);
+            case PREFERENCE_GROUP:
+                TypedArray prefGroup = ctx.obtainStyledAttributes(attrs, R.styleable.MagicPreferenceGroup);
+                return prefGroup.getString(R.styleable.MagicPreferenceGroup_preferenceGroupTypeface);
+            case EDIT_TEXT_PREFERENCE:
+                TypedArray editText = ctx.obtainStyledAttributes(attrs, R.styleable.MagicEditTextPreference);
+                return editText.getString(R.styleable.MagicEditTextPreference_editTextTypeface);
+            default:
+                return "";
+        }
+
+    }
+
+}

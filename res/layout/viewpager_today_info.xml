@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.gitonway.fineday"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/top_box"
+    android:orientation="vertical"
+    android:padding="10dp" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+
+        <LinearLayout
+            android:id="@+id/layout_week_"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/today_week"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:textColor="@color/text_color"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/today_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:paddingLeft="5dp"
+                android:textColor="@color/text_color" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_another_info_"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/layout_week_"
+            android:alpha="0"
+            android:background="@color/top_box"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/wind"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:drawableLeft="@drawable/wind"
+                android:drawablePadding="5dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="5dp"
+                android:text="西北风 1级"
+                android:textColor="@color/text_color" />
+
+            <TextView
+                android:id="@+id/air"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:drawableLeft="@drawable/air"
+                android:drawablePadding="5dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="5dp"
+                android:text="严重污染"
+                android:textColor="@color/text_color" />
+        </LinearLayout>
+
+        <com.gitonway.fineday.widget.shimmer.ShimmerTextView
+            android:id="@+id/area"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="北京"
+            android:textColor="@color/text_color"
+            android:textSize="20sp"
+            app:reflectionColor="@color/top_box" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/today_weater_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:id="@+id/weaterinfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/text_color"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2" >
+
+            <TextView
+                android:id="@+id/currentweater"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textColor="@color/text_color"
+                android:textSize="68sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" >
+
+            <TextView
+                android:id="@+id/temph"
+                style="@style/WeaterMoreInfo"
+                android:layout_centerInParent="true" />
+
+            <TextView
+                android:id="@+id/templ"
+                style="@style/WeaterMoreInfo"
+                android:layout_below="@+id/temph"
+                android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

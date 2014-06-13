@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">晴天</string>
+    <string name="hello_world">Hello world!</string>
+
+    <string name="httpError">连接失败</string>
+    <string name="httpisNull">没有网络</string>
+    <string name="select_city">城市选择</string>
+    <string name="my_city">我的城市</string>
+    
+    <string name="delete">删除</string>
+</resources>

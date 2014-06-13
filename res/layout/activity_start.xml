@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.gitonway.fineday.widget.discrollview.DiscrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:discrollve="http://schemas.android.com/apk/res-auto"
+    xmlns:fbutton="http://schemas.android.com/apk/res-auto"
+    android:scrollbars="none"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.gitonway.fineday.widget.discrollview.DiscrollViewContent
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:background="@android:color/white"
+            android:textColor="@android:color/black"
+            android:padding="25dp"
+            android:textSize="36sp"
+            android:gravity="center"
+            android:fontFamily="serif"
+            android:text="做最简单的天气" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_height="100dp"
+            android:scaleType="centerInside"
+            android:layout_gravity="center"
+            android:src="@drawable/fineday"
+            discrollve:discrollve_alpha="true"
+            discrollve:discrollve_translation="fromTop"
+            discrollve:discrollve_scaleX="true"
+            discrollve:discrollve_scaleY="true"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@color/comm_3"
+            discrollve:discrollve_alpha="true"
+            discrollve:discrollve_threshold="0.3" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            discrollve:discrollve_alpha="true"
+            discrollve:discrollve_translation="fromLeft|fromBottom"
+            android:src="@drawable/w1_s" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            discrollve:discrollve_fromBgColor="@color/comm_2"
+            discrollve:discrollve_toBgColor="#000000" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:src="@drawable/w1_m"
+            discrollve:discrollve_translation="fromRight" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:fontFamily="serif"
+            android:gravity="center"
+            android:text="钓鱼岛是中国的，XXX是世界的"
+            android:textSize="18sp"
+            discrollve:discrollve_alpha="true"
+            discrollve:discrollve_translation="fromBottom" />
+
+        <com.gitonway.fineday.widget.fbutton.FButton
+            android:id="@+id/enterMain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Go!"
+            android:layout_marginBottom="20dp"
+            android:minWidth="140dp"
+            android:minHeight="50dp"
+            android:textColor="@color/white"
+            discrollve:discrollve_scaleX="true"
+            discrollve:discrollve_scaleY="true"
+            android:layout_gravity="center"
+            fbutton:buttonColor="@color/comm_2"
+            fbutton:shadowEnabled="false"
+            />
+        
+
+    </com.gitonway.fineday.widget.discrollview.DiscrollViewContent>
+</com.gitonway.fineday.widget.discrollview.DiscrollView>

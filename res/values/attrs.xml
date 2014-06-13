@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="JazzyViewPager">
+        <attr name="style">
+            <enum name="standard" value="0" />
+            <enum name="tablet" value="1" />
+            <enum name="cubein" value="2" />
+            <enum name="cubeout" value="3" />
+            <enum name="flipvertical" value="4" />
+            <enum name="fliphorizontal" value="5" />
+            <enum name="stack" value="6" />
+            <enum name="zoomin" value="7" />
+            <enum name="zoomout" value="8" />
+            <enum name="rotateup" value="9" />
+            <enum name="rotatedown" value="10" />
+            <enum name="accordion" value="11" />
+        </attr>
+        <attr name="fadeEnabled" format="boolean" />
+        <attr name="outlineEnabled" format="boolean" />
+        <attr name="outlineColor" format="color|reference" />
+    </declare-styleable>
+	<declare-styleable name="JazzyListView" >
+        <attr name="effect" format="enum" >
+            <enum name="standard" value="0" />
+            <enum name="grow" value="1" />
+            <enum name="cards" value="2" />
+	        <enum name="curl" value="3" />
+	        <enum name="wave" value="4" />
+	        <enum name="flip" value="5" />
+	        <enum name="fly" value="6" />
+	        <enum name="reverse_fly" value="7" />
+	        <enum name="helix" value="8" />
+	        <enum name="fan" value="9" />
+	        <enum name="tilt" value="10" />
+	        <enum name="zipper" value="11" />
+	        <enum name="fade" value="12" />
+	        <enum name="twirl" value="13" />
+	        <enum name="slide_in" value="14" />
+        </attr>
+        
+        <attr name="only_animate_new_items" format="boolean" />
+        <attr name="only_animate_fling" format="boolean" />
+        <attr name="simulate_grid_with_list" format="boolean" />
+        <attr name="max_velocity" format="integer" />
+    </declare-styleable>
+    <declare-styleable name="SwipeListView">
+        <attr name="swipeOpenOnLongPress" format="boolean"/>
+        <attr name="swipeAnimationTime" format="integer"/>
+        <attr name="swipeOffsetLeft" format="dimension"/>
+        <attr name="swipeOffsetRight" format="dimension"/>
+        <attr name="swipeCloseAllItemsWhenMoveList" format="boolean"/>
+        <attr name="swipeFrontView" format="reference"/>
+        <attr name="swipeBackView" format="reference"/>
+        <attr name="swipeMode" format="enum">
+            <enum name="none" value="0"/>
+            <enum name="both" value="1"/>
+            <enum name="right" value="2"/>
+            <enum name="left" value="3"/>
+        </attr>
+        <attr name="swipeActionLeft" format="enum">
+            <enum name="reveal" value="0"/>
+            <enum name="dismiss" value="1"/>
+            <enum name="choice" value="2"/>
+        </attr>
+        <attr name="swipeActionRight" format="enum">
+            <enum name="reveal" value="0"/>
+            <enum name="dismiss" value="1"/>
+            <enum name="choice" value="2"/>
+        </attr>
+        <attr name="swipeDrawableChecked" format="reference"/>
+        <attr name="swipeDrawableUnchecked" format="reference"/>
+    </declare-styleable>
+    <declare-styleable name="ShimmerView">
+        <attr name="reflectionColor" format="color"/>
+    </declare-styleable>
+    
+    <declare-styleable name="MagicFont">
+        <attr name="typeFace" format="string"/>
+    </declare-styleable>
+
+    <declare-styleable name="MagicPreference">
+        <attr name="prefTypeface" format="string"/>
+    </declare-styleable>
+
+    <declare-styleable name="MagicSwitchPreference">
+        <attr name="switchPrefTypeface" format="string"/>
+    </declare-styleable>
+
+    <declare-styleable name="MagicCheckBoxPreference">
+        <attr name="checkBoxTypeface" format="string"/>
+    </declare-styleable>
+
+    <declare-styleable name="MagicPreferenceGroup">
+        <attr name="preferenceGroupTypeface" format="string"/>
+    </declare-styleable>
+
+    <declare-styleable name="MagicEditTextPreference">
+        <attr name="editTextTypeface" format="string"/>
+    </declare-styleable>
+    
+    <declare-styleable name="DiscrollView_LayoutParams">
+        <attr name="discrollve_alpha" format="boolean"/>
+        <attr name="discrollve_scaleX" format="boolean"/>
+        <attr name="discrollve_scaleY" format="boolean"/>
+        <attr name="discrollve_threshold" format="float"/>
+        <attr name="discrollve_fromBgColor" format="color"/>
+        <attr name="discrollve_toBgColor" format="color"/>
+        <attr name="discrollve_translation"/>
+    </declare-styleable>
+
+    <attr name="discrollve_translation">
+        <flag name="fromTop" value="0x01" />
+        <flag name="fromBottom" value="0x02" />
+        <flag name="fromLeft" value="0x04" />
+        <flag name="fromRight" value="0x08" />
+    </attr>
+    
+    <declare-styleable name="FButton">
+        <attr name="shadowEnabled" format="boolean" />
+        <attr name="buttonColor" format="color" />
+        <attr name="shadowColor" format="color" />
+        <attr name="shadowHeight" format="dimension" />
+        <attr name="cornerRadius" format="dimension" />
+    </declare-styleable>
+</resources>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="boxBg">#88404040</color>
+    <color name="text_color">#F5F5F5</color>
+    <color name="top_box">#ef7970</color>
+    <color name="list_bg">#453c39</color>
+    <color name="list_divider">#bb453c39</color>
+    <color name="white">#ffffff</color>
+    <!-- 黄色 -->
+    <color name="comm_1">#fdc183</color>
+    <!-- 蓝色 -->
+    <color name="comm_2">#93d5fe</color>
+    <!-- 红色 -->
+    <color name="comm_3">#f3715c</color>
+    <color name="holo_blue">#FF33E5B5</color>
+    <color name="white_t">#22ffffff</color>
+    
+    <color name="item_color">#5e5653</color>
+    <color name="item_first_color">#88525252</color>
+    
+</resources>
