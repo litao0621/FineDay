@@ -12,17 +12,17 @@ FineDay
 
 感谢
 -------
-https://github.com/keyboardsurfer/Crouton
-    https://github.com/excilys/androidannotations
-    https://github.com/flavienlaurent/discrollview
-    https://github.com/hoang8f/android-flat-button
-    https://github.com/twotoasters/JazzyListView
-    https://github.com/jfeinstein10/JazzyViewPager
-    https://github.com/ikocijan/MagicViews
-    https://github.com/RomainPiel/Shimmer-android
-    https://github.com/47deg/android-swipelistview
-    https://github.com/RomainPiel/Titanic
-    https://github.com/JakeWharton/NineOldAndroids
+https://github.com/keyboardsurfer/Crouton<br>
+https://github.com/excilys/androidannotations<br>
+https://github.com/flavienlaurent/discrollview<br>
+https://github.com/hoang8f/android-flat-button<br>
+https://github.com/twotoasters/JazzyListView<br>
+https://github.com/jfeinstein10/JazzyViewPager<br>
+https://github.com/ikocijan/MagicViews<br>
+https://github.com/RomainPiel/Shimmer-android<br>
+https://github.com/47deg/android-swipelistview<br>
+https://github.com/RomainPiel/Titanic<br>
+https://github.com/JakeWharton/NineOldAndroids<br>
     
 APK下载地址
 ------- 
