@@ -57,15 +57,15 @@ public final class CitySelectionActivity_
     private void init_(Bundle savedInstanceState) {
         OnViewChangedNotifier.registerOnViewChangedListener(this);
         Resources resources_ = this.getResources();
-        myCity = resources_.getString(string.my_city);
         selectCity = resources_.getString(string.select_city);
+        myCity = resources_.getString(string.my_city);
         fadeIn = AnimationUtils.loadAnimation(this, anim.fade_in);
         app = MyApp_.getInstance();
         getWindow().setFlags(android.view.WindowManager.LayoutParams.FLAG_FULLSCREEN, android.view.WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        adapterMyCity = MyCityAapter_.getInstance_(this);
         adapterTown = CityAdapter_.getInstance_(this);
-        adapterProvince = CityAdapter_.getInstance_(this);
         adapterCity = CityAdapter_.getInstance_(this);
+        adapterMyCity = MyCityAapter_.getInstance_(this);
+        adapterProvince = CityAdapter_.getInstance_(this);
     }
 
     @Override
@@ -100,20 +100,20 @@ public final class CitySelectionActivity_
 
     @Override
     public void onViewChanged(HasViews hasViews) {
-        mLayoutCityTitle = ((LinearLayout) hasViews.findViewById(com.gitonway.fineday.R.id.cityTitle));
-        c1 = ((TextView) hasViews.findViewById(com.gitonway.fineday.R.id.c1));
-        mButtonAddCity = ((ImageButton) hasViews.findViewById(com.gitonway.fineday.R.id.addCity));
-        mLayoutCityContent = ((LinearLayout) hasViews.findViewById(com.gitonway.fineday.R.id.cityContent));
-        mListViewProvince = ((JazzyListView) hasViews.findViewById(com.gitonway.fineday.R.id.listProvince));
-        mLayoutSelectCity = ((LinearLayout) hasViews.findViewById(com.gitonway.fineday.R.id.selectCity));
-        mListViewMyCity = ((SwipeListView) hasViews.findViewById(com.gitonway.fineday.R.id.currentCityList));
-        mListViewCurrentCity = ((ListView) hasViews.findViewById(com.gitonway.fineday.R.id.currentCityList));
         mTextViewTitle = ((ShimmerTextView) hasViews.findViewById(com.gitonway.fineday.R.id.currentCityTxt));
+        mLayoutSelectCity = ((LinearLayout) hasViews.findViewById(com.gitonway.fineday.R.id.selectCity));
+        mLayoutCityTitle = ((LinearLayout) hasViews.findViewById(com.gitonway.fineday.R.id.cityTitle));
         c2 = ((TextView) hasViews.findViewById(com.gitonway.fineday.R.id.c2));
-        mListViewTown = ((JazzyListView) hasViews.findViewById(com.gitonway.fineday.R.id.listTown));
-        mLayoutCity = ((LinearLayout) hasViews.findViewById(com.gitonway.fineday.R.id.cityLayout));
-        c3 = ((TextView) hasViews.findViewById(com.gitonway.fineday.R.id.c3));
         mListViewCity = ((JazzyListView) hasViews.findViewById(com.gitonway.fineday.R.id.listCity));
+        mListViewTown = ((JazzyListView) hasViews.findViewById(com.gitonway.fineday.R.id.listTown));
+        c3 = ((TextView) hasViews.findViewById(com.gitonway.fineday.R.id.c3));
+        c1 = ((TextView) hasViews.findViewById(com.gitonway.fineday.R.id.c1));
+        mLayoutCityContent = ((LinearLayout) hasViews.findViewById(com.gitonway.fineday.R.id.cityContent));
+        mButtonAddCity = ((ImageButton) hasViews.findViewById(com.gitonway.fineday.R.id.addCity));
+        mListViewCurrentCity = ((ListView) hasViews.findViewById(com.gitonway.fineday.R.id.currentCityList));
+        mListViewMyCity = ((SwipeListView) hasViews.findViewById(com.gitonway.fineday.R.id.currentCityList));
+        mLayoutCity = ((LinearLayout) hasViews.findViewById(com.gitonway.fineday.R.id.cityLayout));
+        mListViewProvince = ((JazzyListView) hasViews.findViewById(com.gitonway.fineday.R.id.listProvince));
         {
             View view = hasViews.findViewById(com.gitonway.fineday.R.id.addCity);
             if (view!= null) {
@@ -145,21 +145,6 @@ public final class CitySelectionActivity_
             }
         }
         {
-            AdapterView<?> view = ((AdapterView<?> ) hasViews.findViewById(com.gitonway.fineday.R.id.listProvince));
-            if (view!= null) {
-                view.setOnItemClickListener(new OnItemClickListener() {
-
-
-                    @Override
-                    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                        CitySelectionActivity_.this.listProvinceItemClicked(((CityModel) parent.getAdapter().getItem(position)));
-                    }
-
-                }
-                );
-            }
-        }
-        {
             AdapterView<?> view = ((AdapterView<?> ) hasViews.findViewById(com.gitonway.fineday.R.id.listTown));
             if (view!= null) {
                 view.setOnItemClickListener(new OnItemClickListener() {
@@ -168,6 +153,21 @@ public final class CitySelectionActivity_
                     @Override
                     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                         CitySelectionActivity_.this.listTownItemClicked(((CityModel) parent.getAdapter().getItem(position)));
+                    }
+
+                }
+                );
+            }
+        }
+        {
+            AdapterView<?> view = ((AdapterView<?> ) hasViews.findViewById(com.gitonway.fineday.R.id.listProvince));
+            if (view!= null) {
+                view.setOnItemClickListener(new OnItemClickListener() {
+
+
+                    @Override
+                    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                        CitySelectionActivity_.this.listProvinceItemClicked(((CityModel) parent.getAdapter().getItem(position)));
                     }
 
                 }

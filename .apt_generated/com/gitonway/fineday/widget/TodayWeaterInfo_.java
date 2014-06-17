@@ -71,33 +71,18 @@ public final class TodayWeaterInfo_
 
     @Override
     public void onViewChanged(HasViews hasViews) {
-        mTextViewDate = ((TextView) hasViews.findViewById(id.today_date));
-        mLayoutWeek = ((LinearLayout) hasViews.findViewById(id.layout_week_));
-        mTextViewWeaterInfo = ((TextView) hasViews.findViewById(id.weaterinfo));
-        mTextViewTempH = ((TextView) hasViews.findViewById(id.temph));
         mImageViewIcon = ((ImageView) hasViews.findViewById(id.today_weater_icon));
+        mTextViewDate = ((TextView) hasViews.findViewById(id.today_date));
+        mTextViewWeaterInfo = ((TextView) hasViews.findViewById(id.weaterinfo));
         mTextViewAir = ((TextView) hasViews.findViewById(id.air));
-        mTextViewArea = ((ShimmerTextView) hasViews.findViewById(id.area));
         mLayoutInfo = ((LinearLayout) hasViews.findViewById(id.layout_another_info_));
-        mTextViewCurrentWeater = ((TextView) hasViews.findViewById(id.currentweater));
         mTextViewWeek = ((TextView) hasViews.findViewById(id.today_week));
+        mTextViewArea = ((ShimmerTextView) hasViews.findViewById(id.area));
         mTextViewWind = ((TextView) hasViews.findViewById(id.wind));
+        mLayoutWeek = ((LinearLayout) hasViews.findViewById(id.layout_week_));
+        mTextViewCurrentWeater = ((TextView) hasViews.findViewById(id.currentweater));
         mTextViewTempL = ((TextView) hasViews.findViewById(id.templ));
-        {
-            View view = hasViews.findViewById(id.area);
-            if (view!= null) {
-                view.setOnClickListener(new OnClickListener() {
-
-
-                    @Override
-                    public void onClick(View view) {
-                        TodayWeaterInfo_.this.areaClicked();
-                    }
-
-                }
-                );
-            }
-        }
+        mTextViewTempH = ((TextView) hasViews.findViewById(id.temph));
         {
             View view = hasViews.findViewById(id.currentweater);
             if (view!= null) {
@@ -107,6 +92,21 @@ public final class TodayWeaterInfo_
                     @Override
                     public void onClick(View view) {
                         TodayWeaterInfo_.this.currentweaterClicked();
+                    }
+
+                }
+                );
+            }
+        }
+        {
+            View view = hasViews.findViewById(id.area);
+            if (view!= null) {
+                view.setOnClickListener(new OnClickListener() {
+
+
+                    @Override
+                    public void onClick(View view) {
+                        TodayWeaterInfo_.this.areaClicked();
                     }
 
                 }

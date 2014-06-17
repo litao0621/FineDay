@@ -68,11 +68,11 @@ public final class WeaterItem_
 
     @Override
     public void onViewChanged(HasViews hasViews) {
-        mLayoutWeater = ((LinearLayout) hasViews.findViewById(id.item_weater_));
-        mTextViewIcon = ((ImageView) hasViews.findViewById(id.wcicon_));
-        mTextViewTempH = ((TextView) hasViews.findViewById(id.tempH_));
         mTextViewTempL = ((TextView) hasViews.findViewById(id.tempL_));
+        mTextViewIcon = ((ImageView) hasViews.findViewById(id.wcicon_));
         mTextViewWeek = ((TextView) hasViews.findViewById(id.week_));
+        mTextViewTempH = ((TextView) hasViews.findViewById(id.tempH_));
+        mLayoutWeater = ((LinearLayout) hasViews.findViewById(id.item_weater_));
     }
 
 }

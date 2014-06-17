@@ -151,15 +151,16 @@ public class MainActivity extends BaseActivity implements OnRefreshListener,
 //		System.out.println(UMengUtils.getDeviceInfo(this));
 		
 		
-		showProgressDialog();
+		
 		isFirst=PreferencesUtils.getBoolean(this, PreferencesUtils.FIRST_ENTER,true);
 		
 		
 		
 		int length = ToJsonStrUtils.getCityListLength(this);
 		if (length == 0) {
-			openActivity(CitySelectionActivity_.class);
+			CitySelectionActivity_.intent(this).startForResult(TodayWeaterInfo.REQUEST_CODE);
 		} else {
+			showProgressDialog();
 			viewInit();
 			getWeaterListData();
 		}
@@ -415,7 +416,7 @@ public class MainActivity extends BaseActivity implements OnRefreshListener,
 	@OnActivityResult(TodayWeaterInfo.REQUEST_CODE)
 	void onResult(int resultCode) {
 			//如果城市添加成功或有删除的城市但没有添加，从新加载界面
-			if (resultCode==1||length!=numberOfCity) {
+			if (resultCode==1||length!=numberOfCity||isFirst==true) {
 				numberOfCity = length;
 				viewInit();
 				getWeaterListData();

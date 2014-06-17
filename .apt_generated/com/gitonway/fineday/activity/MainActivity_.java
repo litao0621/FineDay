@@ -88,10 +88,10 @@ public final class MainActivity_
 
     @Override
     public void onViewChanged(HasViews hasViews) {
-        mViewPager = ((JazzyViewPager) hasViews.findViewById(id.jazzy_pager));
         mMainLayout = ((LinearLayout) hasViews.findViewById(id.main_bg));
-        mListViewWeater = ((ListView) hasViews.findViewById(id.weater_list));
         mSwipeRefreshLayout = ((SwipeRefreshLayout) hasViews.findViewById(id.refresh_container));
+        mListViewWeater = ((ListView) hasViews.findViewById(id.weater_list));
+        mViewPager = ((JazzyViewPager) hasViews.findViewById(id.jazzy_pager));
         initActivity();
     }
 
@@ -106,20 +106,6 @@ public final class MainActivity_
     }
 
     @Override
-    public void updateSingleList(final WeaterModel model) {
-        handler_.post(new Runnable() {
-
-
-            @Override
-            public void run() {
-                MainActivity_.super.updateSingleList(model);
-            }
-
-        }
-        );
-    }
-
-    @Override
     public void updateList(final List<WeaterModel> models) {
         handler_.post(new Runnable() {
 
@@ -127,6 +113,20 @@ public final class MainActivity_
             @Override
             public void run() {
                 MainActivity_.super.updateList(models);
+            }
+
+        }
+        );
+    }
+
+    @Override
+    public void updateSingleList(final WeaterModel model) {
+        handler_.post(new Runnable() {
+
+
+            @Override
+            public void run() {
+                MainActivity_.super.updateSingleList(model);
             }
 
         }
