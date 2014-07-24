@@ -1,7 +1,7 @@
 FineDay
 =======
 
-简洁天气-一款简单的天气应用
+FineDay-A simple weather app
 
 
 ![](http://pp.myapp.com/ma_pic/0/shot_10635538_18167361_2_1402392647/550)
@@ -10,26 +10,29 @@ FineDay
 
 
 
-感谢
+Acknowledgements
 =======
-https://github.com/keyboardsurfer/Crouton<br>
-https://github.com/excilys/androidannotations<br>
-https://github.com/flavienlaurent/discrollview<br>
-https://github.com/hoang8f/android-flat-button<br>
-https://github.com/twotoasters/JazzyListView<br>
-https://github.com/jfeinstein10/JazzyViewPager<br>
-https://github.com/ikocijan/MagicViews<br>
-https://github.com/RomainPiel/Shimmer-android<br>
-https://github.com/47deg/android-swipelistview<br>
-https://github.com/RomainPiel/Titanic<br>
-https://github.com/JakeWharton/NineOldAndroids<br>
+
+It also uses many other open source libraries such as:
+
+* [Crouton](https://github.com/keyboardsurfer/Crouton)
+* [androidannotations](https://github.com/excilys/androidannotations)
+* [discrollview](https://github.com/flavienlaurent/discrollview)
+* [android-flat-button](https://github.com/hoang8f/android-flat-button)
+* [JazzyListView](https://github.com/twotoasters/JazzyListView)
+* [JazzyViewPager](https://github.com/jfeinstein10/JazzyViewPager)
+* [MagicViews](https://github.com/ikocijan/MagicViews)
+* [Shimmer-android](https://github.com/RomainPiel/Shimmer-android)
+* [android-swipelistview](https://github.com/47deg/android-swipelistview)
+* [Titanic](https://github.com/RomainPiel/Titanic)
+* [NineOldAndroids](https://github.com/JakeWharton/NineOldAndroids)
     
-APK下载地址
+Download APK
 ======= 
 
-[豌豆荚](http://www.wandoujia.com/apps/com.gitonway.fineday)
-[应用宝](http://android.myapp.com/myapp/detail.htm?apkName=com.gitonway.fineday)
-[小米应用](http://app.xiaomi.com/detail/64131)
+[SnapPea](http://www.wandoujia.com/apps/com.gitonway.fineday)
+[Tencent](http://android.myapp.com/myapp/detail.htm?apkName=com.gitonway.fineday)
+[Xiaomi](http://app.xiaomi.com/detail/64131)
 License
 =======
 
